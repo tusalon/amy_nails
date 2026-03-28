@@ -1,22 +1,22 @@
-// sw.js - Service Worker para DBELLA
+// sw.js - Service Worker para Amy nails
 
-const CACHE_NAME = 'dbella-v1';
+const CACHE_NAME = 'amy_nails-v1';
 const urlsToCache = [
-  '/dbella/',
-  '/dbella/index.html',
-  '/dbella/admin.html',
-  '/dbella/admin-login.html',
-  '/dbella/setup-wizard.html',
-  '/dbella/editar-negocio.html',
-  '/dbella/manifest.json',
-  '/dbella/icons/icon-72x72.png',
-  '/dbella/icons/icon-96x96.png',
-  '/dbella/icons/icon-128x128.png',
-  '/dbella/icons/icon-144x144.png',
-  '/dbella/icons/icon-152x152.png',
-  '/dbella/icons/icon-192x192.png',
-  '/dbella/icons/icon-384x384.png',
-  '/dbella/icons/icon-512x512.png'
+  '/amy_nails/',
+  '/amy_nails/index.html',
+  '/amy_nails/admin.html',
+  '/amy_nails/admin-login.html',
+  '/amy_nails/setup-wizard.html',
+  '/amy_nails/editar-negocio.html',
+  '/amy_nails/manifest.json',
+  '/amy_nails/icons/icon-72x72.png',
+  '/amy_nails/icons/icon-96x96.png',
+  '/amy_nails/icons/icon-128x128.png',
+  '/amy_nails/icons/icon-144x144.png',
+  '/amy_nails/icons/icon-152x152.png',
+  '/amy_nails/icons/icon-192x192.png',
+  '/amy_nails/icons/icon-384x384.png',
+  '/amy_nails/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/dbella/icons/icon-192x192.png');
+            return caches.match('/amy_nails/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para DBELLA');
+console.log('✅ Service Worker configurado para Amy nails');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);

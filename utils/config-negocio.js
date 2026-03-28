@@ -1,12 +1,12 @@
 // utils/config-negocio.js - VERSIÓN MULTI-TENANT CORREGIDA
-// CLIENTE: DBELLA
+// CLIENTE: Amy nails
 
 console.log('🏢 config-negocio.js cargado');
 
 // ============================================
 // 🔥 CONFIGURACIÓN POR CLIENTE - ¡LO ÚNICO QUE CAMBIA!
 // ============================================
-const NEGOCIO_ID_POR_DEFECTO = '20c29c00-190b-4d01-8c4d-e8be6b18a809'; // ID de DBELLA
+const NEGOCIO_ID_POR_DEFECTO = '9240a7fc-ee56-455d-9426-faa10d855081'; // ID de Amy nails
 
 // Hacer accesible globalmente
 window.NEGOCIO_ID_POR_DEFECTO = NEGOCIO_ID_POR_DEFECTO;
@@ -116,7 +116,7 @@ window.cargarConfiguracionNegocio = async function(forceRefresh = false) {
  */
 window.getNombreNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.nombre || 'DBELLA';
+    return config?.nombre || 'Amy nails';
 };
 
 /**
@@ -124,7 +124,7 @@ window.getNombreNegocio = async function() {
  */
 window.getTelefonoDuenno = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.telefono || '58535887';
+    return config?.telefono || '63165605';
 };
 
 /**
@@ -132,7 +132,7 @@ window.getTelefonoDuenno = async function() {
  */
 window.getEmailNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.email || 'aitanadglez1999@gmail.com';
+    return config?.email || 'perezmartinamanda006@gmail.com';
 };
 
 /**
@@ -164,7 +164,7 @@ window.getHorarioAtencion = async function() {
  */
 window.getMensajeBienvenida = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.mensaje_bienvenida || '¡Bienvenida a DBELLA!';
+    return config?.mensaje_bienvenida || '¡Bienvenida a Amy nails!';
 };
 
 /**
@@ -180,7 +180,7 @@ window.getMensajeConfirmacion = async function() {
  */
 window.getNtfyTopic = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.ntfy_topic || 'dbella';
+    return config?.ntfy_topic || 'amy_nails';
 };
 
 /**
@@ -205,5 +205,5 @@ setTimeout(async () => {
     await window.cargarConfiguracionNegocio();
 }, 500);
 
-console.log('✅ config-negocio.js listo para DBELLA');
+console.log('✅ config-negocio.js listo para Amy nails');
 console.log('🏷️  ID configurado:', NEGOCIO_ID_POR_DEFECTO);
